@@ -11,17 +11,17 @@ public class App {
         Gson gson = new Gson();
 
         // Create a Student object and serialize it to JSON
-        Student john_Student = new Student("John", 123456);
-        String john = gson.toJson(john_Student);
+        Student hugo = new Student("Hugo Iglesias", 136735);
+        String hugoJson = gson.toJson(hugo);
 
         System.out.println("Serialized JSON:");
-        System.out.println(john);
+        System.out.println(hugoJson);
 
         // Deserialize JSON back into a Student object
-        String paul = "{\"name\":\"Paul\",\"number\":987654}";
-        Student paul_Student = gson.fromJson(paul, Student.class);
+        String exampleJson = "{\"name\":\"Miguel Santos\",\"number\":987654}";
+        Student exampleStudent = gson.fromJson(exampleJson, Student.class);
 
         System.out.println("\nDeserialized Object:");
-        System.out.println(paul_Student);
+        System.out.println(exampleStudent);
     }
 }
